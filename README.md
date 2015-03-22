@@ -1,6 +1,6 @@
 # nova_dirsvc_plugin
 
-## I. OVERVIEW
+## I. Overview
 
 This plugin implements Nova Hooks to populate a database external to
 OpenStack (e.g. an LDAP directory server) with data about a launched 
@@ -41,7 +41,7 @@ of an instance.
 {   'instance_uuid': '2cb805cf-debe-43ae-a555-28a4a5d84694'}
 ```
 
-## II. INSTALLATION
+## II. Installation
 
 Nova was packaged using Setuptools, which gives Nova the ability to
 trigger plugins through entry points [3]. This plugin should also be
@@ -58,25 +58,26 @@ OpenStack Platform).
   `cd nova_dirsvc_plugin/`
   `python setup.py bdist_egg` 
 
-You should then have a file like dist/nova_dirsvc_plugin-1-py2.7.egg
+   You should then have a file like dist/nova_dirsvc_plugin-1-py2.7.egg
 
 3. Install the plugin
 
-Install the egg file in /usr/lib/python2.7/site-packages 
+   Install the egg file in /usr/lib/python2.7/site-packages 
 
   `sudo python setup.py install --verbose` 
 
-Restart the relevant Nova service so that it can load the new plugin. 
+   Restart the relevant Nova service so that it can load the new plugin. 
 
   `sudo service openstack-nova-api restart`
   `sudo service openstack-nova-compute restart`
 
 4. Test the Package
 
-Start an instance and then verify that you can see a file like: 
+  Start an instance and then verify that you can see a file like: 
 
  `/var/log/nova/nova_dirsvc_plugin.log`
 
-[1] http://blog.oddbit.com/2014/09/27/integrating-custom-code-with-n/ 
-[2] https://github.com/larsks/demo_nova_hooks
-[2] https://pythonhosted.org/setuptools/setuptools.html#dynamic-discovery-of-services-and-plugins
+Footnotes:
+- [1] http://blog.oddbit.com/2014/09/27/integrating-custom-code-with-n/ 
+- [2] https://github.com/larsks/demo_nova_hooks
+- [2] https://pythonhosted.org/setuptools/setuptools.html#dynamic-discovery-of-services-and-plugins
