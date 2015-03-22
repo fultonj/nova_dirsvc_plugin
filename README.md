@@ -54,10 +54,10 @@ OpenStack Platform).
   `git clone https://github.com/fultonj/nova_dirsvc_plugin.git`
 
 2. Build an egg file of the plugin
-   
-  `cd nova_dirsvc_plugin/`
-  `python setup.py bdist_egg` 
-
+  ```
+  cd nova_dirsvc_plugin/
+  python setup.py bdist_egg 
+  ```
    You should then have a file like dist/nova_dirsvc_plugin-1-py2.7.egg
 
 3. Install the plugin
@@ -68,8 +68,10 @@ OpenStack Platform).
 
    Restart the relevant Nova service so that it can load the new plugin. 
 
-  `sudo service openstack-nova-api restart`
-  `sudo service openstack-nova-compute restart`
+  ```
+  sudo service openstack-nova-api restart
+  sudo service openstack-nova-compute restart
+  ```
 
 4. Test the Package
 
@@ -77,7 +79,7 @@ OpenStack Platform).
 
  `/var/log/nova/nova_dirsvc_plugin.log`
 
-Footnotes:
-- [1] http://blog.oddbit.com/2014/09/27/integrating-custom-code-with-n/ 
-- [2] https://github.com/larsks/demo_nova_hooks
-- [2] https://pythonhosted.org/setuptools/setuptools.html#dynamic-discovery-of-services-and-plugins
+Footnotes
+1. http://blog.oddbit.com/2014/09/27/integrating-custom-code-with-n/ 
+2. https://github.com/larsks/demo_nova_hooks
+2. https://pythonhosted.org/setuptools/setuptools.html#dynamic-discovery-of-services-and-plugins
