@@ -62,8 +62,8 @@ OpenStack Platform).
    You should then have a file like dist/nova_dirsvc_plugin-1-py2.7.egg
 
 3. Install the plugin
-   ```
-   Install the egg file in `/usr/lib/python2.7/site-packages`
+
+   Install the egg file in /usr/lib/python2.7/site-packages
    ```
    sudo python setup.py install --verbose 
    ```
